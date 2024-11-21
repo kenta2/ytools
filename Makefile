@@ -21,7 +21,8 @@
 # SOFTWARE.
 
 CC = gcc
-CFLAGS = -g -std=c11
+CFLAGS = -g
+# may NOT use -std=c11 or else <unistd.h> will not contain usleep()
 WARN_FLAGS = -Wall # -Wconversion
 OPT_FLAGS = -O3
 INC = -I. 

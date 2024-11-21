@@ -33,6 +33,10 @@ DWORD WINAPI tpool_worker_main(LPVOID thread_data);
 #include <errno.h>
 void *tpool_worker_main(void *thread_data);
 #endif
+
+// for usleep
+#include <unistd.h>
+
 void tpool_start(tpool_t *t);
 void tpool_stop(tpool_t *t);
 
