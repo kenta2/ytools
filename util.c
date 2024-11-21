@@ -1862,7 +1862,12 @@ uint64_t combinations(int** c, int n, int p, int x) {
     uint64_t k = choose(n, p);
     for (j = 0; j < k; j++)
     {
-        combination(&c[j], n, p, j);
+        fprintf(stderr,"ERROR: 1da3b69c-db4f-4eb9-86a5-a0692cb254b7 next line has compilation error, so aborting. (passing argument 1 of 'combination' from incompatible pointer type. note: expected 'int *' but argument is of type 'int **')\n");
+	exit(1);
+        //combination(&c[j], n, p, j);
+	/* maybe the correct fix:
+        combination(c[j], n, p, j);
+	*/
     }
     return k;
 }
